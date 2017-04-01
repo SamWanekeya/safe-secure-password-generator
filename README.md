@@ -9,8 +9,6 @@
 
 [Secure Random Password Generator](https://www.wanekeyasam.co.ke/repositories/strong-secure-password-generator) is a free password generating tool for all handheld devices.
 
-This SDK allows your site's visitors to receive push notifications from you. Send visitors custom notification content, target specific users, and send automatically based on triggers.
-
 ## Demo and Examples
 You can view a live demo and generate actual password(s) depending on your preferences. You can also get advice on how to pick and secure your passwords.
 
