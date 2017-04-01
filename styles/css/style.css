@@ -1,0 +1,786 @@
+/*======================================
+/* 	
+ [ -Main Stylesheet-
+  	++++Import Fonts++++
+	++++General Style++++
+	++++Title(Top) section++++
+	++++Typography+++++
+	++++Password Configuration++++
+	++++Button (Generate Password)+++++
+	++++Loading++++
+	++++Social Share++++
+	++++Error++++
+	++++Footer++++
+*/
+
+/*------------- Import fonts ---------------------------------------*/
+@import url(//fonts.googleapis.com/css?family=Lilita+One);
+@import url(//fonts.googleapis.com/css?family=Dosis:400,500,600);
+@font-face {
+    font-family: 'icons';
+    src: url("../../styles/fonts/icomoon.woff") format("woff")
+}
+
+/*-------------  General Style  ---------------------------------------*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+:root {
+    --title-scale: scale(1);
+    --title-height: 167px
+}
+
+::selection {
+    background: #ccc
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: 0.2s ease
+}
+
+a:hover {
+    color: #333
+}
+
+p a {
+    border-bottom: 1px solid #aaa
+}
+
+i {
+    font-style: italic
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.5em;
+    text-align: center
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.icon:after {
+    font-family: 'icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+body {
+    font-size: 62.5%;
+    box-shadow: inset 0 0 50px 0 rgba(0, 0, 0, 0.15);
+    font-family: 'Dosis';
+    background-color: #f1f1f1;
+    color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    -webkit-text-size-adjust: 100%
+}
+
+header {
+    font-family: 'Lilita One', cursive !important;
+}
+
+.no-vars .title {
+    min-height: 167px
+}
+
+/*------------- Title(Top) section ---------------------------------------*/
+
+.title {
+    font-size: 0.6em;
+    font-size: 6px;
+    min-height: var(--title-height);
+    position: relative;
+    transform-origin: left top 0;
+    transform: var(--title-scale);
+    margin: 0 12px
+}
+
+.title h1 {
+    position: absolute;
+    top: 2.9em;
+    left: 3.4em;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1
+}
+
+.title h1 span {
+    display: block
+}
+
+.title h1 span.password {
+	color: #811e68;
+    font-size: 10.2em;
+    letter-spacing: -0.036em
+}
+
+.title h1 span.generator {
+	color: #410f35;
+    font-size: 7.6em;
+    margin-left: 1.39em;
+    line-height: 0.65;
+    letter-spacing: -0.017em
+}
+
+.title>span {
+    position: absolute;
+    display: block
+}
+
+.title .xg3j6wba6 {
+    font-size: 2.8em;
+    top: 1.67857em;
+    left: 1.10714em;
+    letter-spacing: 0.01em;
+    color: rgba(0, 0, 0, 0.6)
+}
+
+.title .ebik9d3f {
+    font-size: 3.2em;
+    top: 4.0625em;
+    left: 2.15625em;
+    color: rgba(0, 0, 0, 0.4)
+}
+
+.title .j6gp4s {
+    font-size: 3.3em;
+    top: 3.81818em;
+    left: 3.21212em;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.title .m853yaxh {
+    font-size: 2.9em;
+    top: 4.98276em;
+    left: 4.61724em;
+    color: rgba(0, 0, 0, 0.3)
+}
+
+.title .rts92 {
+    font-size: 3.4em;
+    letter-spacing: -0.01em;
+    top: 5.58824em;
+    left: 4.03529em;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.title .k92za9vk {
+    font-size: 3.7em;
+    top: 6.08108em;
+    left: 4.35135em;
+    color: rgba(0, 0, 0, 0.4)
+}
+
+.title .ptj99a5 {
+    font-size: 3.4em;
+    letter-spacing: -0.01em;
+    top: 7.58824em;
+    left: 4.03529em;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.title .b8ej2dh4 {
+    font-size: 2em;
+    top: 9.75em;
+    left: 13.85em;
+    color: rgba(0, 0, 0, 0.6)
+}
+
+.title .sbm52j2f {
+	color: #333333;
+    position: absolute;
+    font-size: 2.5em;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    top: 7.68em;
+    left: 20.6em
+}
+
+.title .r {
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin: left top 0;
+    transform: rotate(90deg);
+    transform-origin: left top 0
+}
+
+@keyframes main {
+    0% {
+        transform: translateY(35px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1
+    }
+}
+
+/*-------------- Typography --------------------------------------*/
+
+main,
+.left-align {
+    width: 100%;
+    min-height: 1px
+}
+
+main {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.1);
+    display: block
+}
+
+.js .main {
+    transform: translateY(35px);
+    opacity: 0
+}
+
+.js main.transition {
+    animation: main 0.7s ease
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Lilita One', cursive !important;
+    font-size: 3.5em;
+    color: #811e68;
+    margin-bottom: 32px;
+    letter-spacing: -.003em;
+    font-weight: 700
+}
+
+h4,
+h5 {
+    margin-bottom: 12px;
+    color: #811e68
+}
+
+h4 {
+    font-size: 1.7em
+}
+
+h5 {
+    font-size: 1.4em
+}
+
+p {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    letter-spacing: -.003em
+}
+
+.small {
+    font-size: 1.4em;
+    margin-bottom: 10px
+}
+
+/*------------- Password Configuration ----------------------------------*/
+
+.generate {
+    padding: 30px
+}
+
+.generate .row {
+    margin-top: 50px
+}
+
+.generate .col2 {
+    margin-top: 46px
+}
+
+.input-wrapper {
+    text-align: center;
+    margin-bottom: 22px;
+    position: relative
+}
+
+.input-wrapper:before {
+    left: 0
+}
+
+.input-wrapper:after {
+    right: 0
+}
+.specialcharacter-container{
+	float:left;
+	width:65px;
+	margin:4px 0;
+	font-size:13px;
+}
+
+.pgen-clear{
+	clear:both;
+}
+
+.ckeckuncheckspecialcharacters_container{
+	margin:6px 0;
+}
+.checkallspecialcharacters{
+	cursor:pointer;
+	color:#8c8c8c;
+	display:inline;
+	border-bottom:1px solid #aaa
+}
+
+.checkallspecialcharacters:hover{
+	color:#333
+}
+
+
+.password-input{
+	margin-bottom:3px;
+	text-align:center;
+	letter-spacing:0;
+	font-family:'Courier New', Courier, monospace; 
+	font-size:22px;
+
+}
+.password-textarea{
+	overflow:hidden; 
+	font-family:'Courier New', Courier, monospace; 
+	font-size:12px;
+}
+
+.password-input, .password-textarea{
+	color:#8c8c8c;
+	width:80%;
+	padding:2px 4px;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	border:1px solid #CFDCF1;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+
+
+
+/*------------- Button (Generate Password) ----------------------------------*/
+
+.primary-btn {
+    box-shadow: 0 0 3px 0 transparent;
+    background-color: white;
+    color: #811e68;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 999em;
+    padding: 12px 48px 12px 29px;
+    cursor: pointer;
+    font-size: 20px !important;
+    font-family: 'Lilita One', cursive;
+    transition: 0.3s ease;
+    outline: 0
+}
+
+.primary-btn:focus,
+.primary-btn:hover {
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    background-color: #811e68;
+    color: white
+}
+
+.primary-btn:focus:after,
+.primary-btn:hover:after {
+    color: #fff
+}
+
+.primary-btn:active {
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 10px 0 rgba(0, 0, 0, 0.4)
+}
+
+.primary-btn:after {
+    position: absolute;
+    right: 25%;
+    top: 11px;
+    font-size: 1.6em;
+    color: #ccc
+}
+
+.primary-btn.active {
+    border: 1px solid #811e68
+}
+/*-------------  Loading  ---------------------------------------*/
+
+.loading{
+		text-align:center;
+	display:none;
+}
+
+/*-------------Social Share ---------------------------------------*/
+
+
+.share-links {
+    position: absolute;
+    right: 16px;
+    z-index: 2
+}
+
+.share-links a {
+    display: block;
+    padding: 10px
+}
+
+.share-links a:after {
+    transition: color 0.3s ease;
+    color: #ccc
+}
+
+.share-links a:hover:after,
+.share-links a:focus:after {
+    color: #666
+}
+
+.facebook:after {
+    font-size: 2.4em;
+	color: #3b5997 !important;
+    content: "\ea90"
+}
+
+.twitter:after {
+    font-size: 2.4em;
+	color: #41b7d8 !important;
+    content: "\ea96"
+}
+.google:after {
+    font-size: 2.6em;
+	color: #d64937 !important;
+    content: "\ea8b"
+}
+
+.pinterest:after {
+    font-size: 2.6em;
+	color: #cb2027 !important;
+    content: "\ead1"
+}
+.linkedin:after {
+	font-size: 2.6em;
+	color: #007dff !important;
+    content: "\eac8"
+}
+.md {
+    display: none
+}
+
+@media (min-width: 650px) {
+    :root {
+        --title-height: 223px
+    }
+    .no-vars .title {
+        min-height: 223px
+    }
+    .title {
+        font-size: 0.8em;
+        margin: 0
+    }
+    .title h1 {
+        top: 2.8em;
+        left: 3.1em
+    }
+    main,
+    .left-align {
+        width: 90%;
+        margin: 0 auto
+    }
+    .generate {
+        padding: 40px
+    }
+    .primary-btn {
+        font-size: 1.2em
+    }
+    .primary-btn:after {
+        right: 10px
+    }
+    #output {
+        min-height: 300px
+    }
+    .share-links {
+        width: auto;
+        top: 10px
+    }
+    .share-links li {
+        float: left
+    }
+    .md {
+        display: block
+    }
+}
+
+@media (min-width: 700px) {
+    .generate .col2 {
+        width: 65%
+    }
+}
+
+@media (min-width: 800px) {
+    .generate .col2 {
+        width: 70%
+    }
+}
+
+@media (min-width: 1000px) {
+    .generate .col2 {
+        width: 70%;
+        margin-left: 100px;
+        float: left
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        --title-height: 278px
+    }
+    .no-vars .title {
+        min-height: 278px
+    }
+    .title {
+        font-size: 1em
+    }
+    .title h1 {
+        top: 3em;
+        left: 3.6em
+    }
+    main,
+    .left-align {
+        width: 1200px
+    }
+    .generate {
+        padding: 50px 60px
+    }
+    .text-input {
+        padding: 20px 10px 20px 20px
+    }
+    .share-links {
+        top: 20px;
+        width: 46px
+    }
+    .share-links ul {
+        position: fixed
+    }
+    .share-links li {
+        float: none
+    }
+}
+
+
+article {
+    padding: 30px 30px 40px 30px;
+    clear: left
+}
+
+.instruction {
+    background: #efefef;
+    padding: 5px;
+    font-size: 1.2em
+}
+
+/*-------------  Error  ---------------------------------------*/
+.pgen-error{
+	display:none;
+	margin-top:8px;
+	padding:6px 4px;
+	font-weight:600;
+	font-size:14px;
+	color:#ff0000;
+	width:100%;
+	text-align: center;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+
+}
+
+/*------------- Footer ---------------------------------------*/
+footer {
+    background: #efefef;
+    padding: 40px 0 20px 0
+}
+
+footer a:link,
+footer a:visited {
+    border-bottom: 1px solid #811e68;
+}
+
+.credits {
+    float: left;
+    margin: 0 12px
+}
+
+.languages {
+    float: right;
+    margin: 0 12px
+}
+
+.languages li {
+    margin-bottom: 8px
+}
+
+@media (min-width: 650px) {
+    article {
+        padding: 30px 40px 40px 40px
+    }
+}
+
+@media (min-width: 1000px) {
+    article {
+        padding-right: 80px
+    }
+}
+
+@media (min-width: 1200px) {
+    article {
+        padding: 50px 180px 50px 60px
+    }
+}
